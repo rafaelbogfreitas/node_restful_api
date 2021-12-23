@@ -3,7 +3,7 @@ const https = require("https");
 const url = require("url");
 const fs = require("fs");
 const StringDecoder = require("string_decoder").StringDecoder;
-const config = require("./config")
+const config = require("./config");
 
 const httpServer = http.createServer((req, res) => {
   unifiedServer(req, res);
