@@ -4,18 +4,22 @@ const url = require("url");
 const fs = require("fs");
 const StringDecoder = require("string_decoder").StringDecoder;
 const config = require("./config");
+const { users, ping, notFound } = require("./lib/handlers");
+const { parseJSONToObject } = require("./lib/helpers");
 
 const httpServer = http.createServer((req, res) => {
   unifiedServer(req, res);
 });
 
 httpServer.listen(config.httpPort, () => {
-  console.log(`Server is running on port ${config.httpPort} in ${config.envName}`);
+  console.log(
+    `Server is running on port ${config.httpPort} in ${config.envName}`
+  );
 });
 
 const options = {
-  key: fs.readFileSync('https/key.pem'),
-  cert: fs.readFileSync('https/cert.pe')
+  key: fs.readFileSync("https/key.pem"),
+  cert: fs.readFileSync("https/cert.pe"),
 };
 
 const httpsServer = https.createServer(options, (req, res) => {
@@ -23,7 +27,9 @@ const httpsServer = https.createServer(options, (req, res) => {
 });
 
 httpsServer.listen(config.httpsPort, () => {
-  console.log(`Server is running on port ${config.httpsPort} in ${config.envName}`);
+  console.log(
+    `Server is running on port ${config.httpsPort} in ${config.envName}`
+  );
 });
 
 const unifiedServer = (req, res) => {
@@ -49,14 +55,14 @@ const unifiedServer = (req, res) => {
     const handler =
       typeof router[trimmedPath] !== "undefined"
         ? router[trimmedPath]
-        : handlers.notFound;
+        : notFound;
 
     const data = {
       method,
       endpoint: trimmedPath,
       query: queryStringObject,
       headers,
-      payload: buffer,
+      payload: parseJSONToObject(buffer),
     };
 
     handler(data, (statusCode, payload) => {
@@ -72,16 +78,8 @@ const unifiedServer = (req, res) => {
   });
 };
 
-const handlers = {
-  ping: (data, callback) => {
-    callback(200);
-  },
-  notFound: (data, callback) => {
-    callback(404);
-  },
-};
-
 const router = {
-  ping: handlers.ping,
-  notFound: handlers.notFound,
+  users,
+  ping,
+  notFound,
 };
