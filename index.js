@@ -4,7 +4,7 @@ const url = require("url");
 const fs = require("fs");
 const StringDecoder = require("string_decoder").StringDecoder;
 const config = require("./config");
-const { users, ping, notFound } = require("./lib/handlers");
+const { tokens, users, ping, notFound } = require("./lib/handlers");
 const { parseJSONToObject } = require("./lib/helpers");
 
 const httpServer = http.createServer((req, res) => {
@@ -79,6 +79,7 @@ const unifiedServer = (req, res) => {
 };
 
 const router = {
+  tokens,
   users,
   ping,
   notFound,
