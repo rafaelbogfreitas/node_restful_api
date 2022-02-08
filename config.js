@@ -5,6 +5,7 @@ environments.staging = {
   httpsPort: 3001,
   envName: 'staging',
   hashingSecret: 'secret',
+  maxChecks: 5,
 };
 
 environments.development = {
@@ -12,6 +13,7 @@ environments.development = {
   httpsPort: 3301,
   envName: 'development',
   hashingSecret: 'secret',
+  maxChecks: 5,
 };
 
 environments.production = {
@@ -19,6 +21,7 @@ environments.production = {
   httpsPort: 5001,
   envName: 'production',
   hashingSecret: 'secret',
+  maxChecks: 5,
 };
 
 const currentEnv = typeof(process.env.NODE_ENV) === "string" ? process.env.NODE_ENV.toLowerCase() : '';
