@@ -6,6 +6,11 @@ environments.staging = {
   envName: 'staging',
   hashingSecret: 'secret',
   maxChecks: 5,
+  twilio: {
+    fromPhone: "+18124456386",
+    accountSid: "AC6199803066b0da7ebc6411665e2c1315",
+    authToken: "bb807a8374b387bf06d61077273ed953",
+  }
 };
 
 environments.development = {
@@ -14,6 +19,11 @@ environments.development = {
   envName: 'development',
   hashingSecret: 'secret',
   maxChecks: 5,
+  twilio: {
+    fromPhone: "+18124456386",
+    accountSid: "AC6199803066b0da7ebc6411665e2c1315",
+    authToken: "bb807a8374b387bf06d61077273ed953",
+  }
 };
 
 environments.production = {
@@ -22,6 +32,11 @@ environments.production = {
   envName: 'production',
   hashingSecret: 'secret',
   maxChecks: 5,
+  twilio: {
+    fromPhone: "+18124456386",
+    accountSid: "AC6199803066b0da7ebc6411665e2c1315",
+    authToken: "bb807a8374b387bf06d61077273ed953",
+  }
 };
 
 const currentEnv = typeof(process.env.NODE_ENV) === "string" ? process.env.NODE_ENV.toLowerCase() : '';
