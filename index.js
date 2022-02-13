@@ -1,5 +1,6 @@
 const server = require("./lib/server");
 const workers = require("./lib/workers");
+require("./lib/env");
 
 const app = {
 

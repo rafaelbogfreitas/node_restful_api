@@ -7,9 +7,9 @@ environments.staging = {
   hashingSecret: 'secret',
   maxChecks: 5,
   twilio: {
-    fromPhone: "+18124456386",
-    accountSid: "AC6199803066b0da7ebc6411665e2c1315",
-    authToken: "45e52c241b587b249e4c5c31ab16d497",
+    fromPhone: process.env.FROM_PHONE,
+    accountSid: process.env.TWILIO_ACCOUNT_SID,
+    authToken: process.env.TWILIO_AUTH_TOKEN,
   }
 };
 
@@ -20,9 +20,9 @@ environments.development = {
   hashingSecret: 'secret',
   maxChecks: 5,
   twilio: {
-    fromPhone: "+18124456386",
-    accountSid: "AC6199803066b0da7ebc6411665e2c1315",
-    authToken: "45e52c241b587b249e4c5c31ab16d497",
+    fromPhone: process.env.FROM_PHONE,
+    accountSid: process.env.TWILIO_ACCOUNT_SID,
+    authToken: process.env.TWILIO_AUTH_TOKEN,
   }
 };
 
@@ -33,9 +33,9 @@ environments.production = {
   hashingSecret: 'secret',
   maxChecks: 5,
   twilio: {
-    fromPhone: "+18124456386",
-    accountSid: "AC6199803066b0da7ebc6411665e2c1315",
-    authToken: "45e52c241b587b249e4c5c31ab16d497",
+    fromPhone: process.env.FROM_PHONE,
+    accountSid: process.env.TWILIO_ACCOUNT_SID,
+    authToken: process.env.TWILIO_AUTH_TOKEN,
   }
 };
 
