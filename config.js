@@ -9,7 +9,7 @@ environments.staging = {
   twilio: {
     fromPhone: "+18124456386",
     accountSid: "AC6199803066b0da7ebc6411665e2c1315",
-    authToken: "bb807a8374b387bf06d61077273ed953",
+    authToken: "45e52c241b587b249e4c5c31ab16d497",
   }
 };
 
@@ -22,7 +22,7 @@ environments.development = {
   twilio: {
     fromPhone: "+18124456386",
     accountSid: "AC6199803066b0da7ebc6411665e2c1315",
-    authToken: "bb807a8374b387bf06d61077273ed953",
+    authToken: "45e52c241b587b249e4c5c31ab16d497",
   }
 };
 
@@ -35,7 +35,7 @@ environments.production = {
   twilio: {
     fromPhone: "+18124456386",
     accountSid: "AC6199803066b0da7ebc6411665e2c1315",
-    authToken: "bb807a8374b387bf06d61077273ed953",
+    authToken: "45e52c241b587b249e4c5c31ab16d497",
   }
 };
 
