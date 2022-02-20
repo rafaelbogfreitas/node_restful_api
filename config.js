@@ -10,6 +10,12 @@ environments.staging = {
     fromPhone: process.env.FROM_PHONE,
     accountSid: process.env.TWILIO_ACCOUNT_SID,
     authToken: process.env.TWILIO_AUTH_TOKEN,
+  },
+  templateGlobals: {
+    appName: "uptimeChecker",
+    companyName: "TestCompany",
+    yearCreated: "2022",
+    baseUrl: "http://localhost:3000",
   }
 };
 
@@ -23,6 +29,12 @@ environments.development = {
     fromPhone: process.env.FROM_PHONE,
     accountSid: process.env.TWILIO_ACCOUNT_SID,
     authToken: process.env.TWILIO_AUTH_TOKEN,
+  },
+  templateGlobals: {
+    appName: "uptimeChecker",
+    companyName: "TestCompany",
+    yearCreated: "2022",
+    baseUrl: "http://localhost:3000",
   }
 };
 
@@ -36,6 +48,12 @@ environments.production = {
     fromPhone: process.env.FROM_PHONE,
     accountSid: process.env.TWILIO_ACCOUNT_SID,
     authToken: process.env.TWILIO_AUTH_TOKEN,
+  },
+  templateGlobals: {
+    appName: "uptimeChecker",
+    companyName: "TestCompany",
+    yearCreated: "2022",
+    baseUrl: "http://localhost:3000",
   }
 };
 
