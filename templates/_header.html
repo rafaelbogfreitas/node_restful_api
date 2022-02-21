@@ -9,19 +9,21 @@
     <meta name="description" content="{head.description}">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="public/app.css" type="text/css">
-    <script src="public/app.js" type="text/jvascript" charset="utf-8"></script>
+    <script src="public/app.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body class="{body.class}">
     <div class="wrapper">
       <div class="header">
-        <a href="/" class="logo"></a>
+        <a href="/" class="logo">
+          <img src="/public/logo.png" alt="logo">
+        </a>
         <ul class="menu">
-          <li><a class="loggedOut" href="/">Home</a></li>
-          <li><a class="loggedOut" href="/">Signup</a></li>
-          <li><a class="loggedOut" href="/">Login</a></li>
-          <li><a class="loggedIn" href="">Dashboard</a></li>
-          <li><a class="loggedIn" href="/">Account Settings</a></li>
-          <li><a class="loggedIn" href="/">Logout</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a class="loggedOut" href="/account/create">Signup</a></li>
+          <li><a class="loggedOut" href="/session/create">Login</a></li>
+          <li><a class="loggedIn" href="/checks/all">Dashboard</a></li>
+          <li><a class="loggedIn" href="/account/edit">Account Settings</a></li>
+          <li><a class="loggedIn" href="#">Logout</a></li>
         </ul>
       </div>
       <div class="content">
