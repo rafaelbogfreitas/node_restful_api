@@ -1,0 +1,30 @@
+<h1>Create Account</h1>
+<h2>It takes less than five minutes</h2>
+<div class="formWrapper">
+  <form action="/api/users" id="accountCreate" method="POST">
+    <div class="formError"></div>
+    <div class="inputWrapper">
+      <div class="inputLabel">First Name</div>
+      <input type="text" name="firstName" placeholder="Rafael">
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Last Name</div>
+      <input type="text" name="lastName" placeholder="Freitas" />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Phone Number</div>
+      <input type="text" name="phone" placeholder="(xx) xxxx-xxxxx" />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Choose a Password</div>
+      <input type="password" name="password" />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Do you agree with the terms and conditions?</div>
+      <input type="checkbox" name="tosAgreement" placeholder="agree" />
+    </div>
+    <div class="inputWrapper">
+      <button type="submit" cta blue">Get Started</button>
+    </div>
+  </form>
+</div>
