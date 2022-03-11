@@ -373,6 +373,7 @@ app.loadDataOnPage = function(){
 app.loadAccountEditPage = function(){
   // Get the phone number from the current token, or log the user out if none is there
   var phone = typeof(app.config.sessionToken.phone) == 'string' ? app.config.sessionToken.phone : false;
+  console.log({ phone, app })
   if(phone){
     // Fetch the user data
     var queryStringObject = {
@@ -393,11 +394,11 @@ app.loadAccountEditPage = function(){
 
       } else {
         // If the request comes back as something other than 200, log the user our (on the assumption that the api is temporarily down or the users token is bad)
-        app.logUserOut();
+        // app.logUserOut();
       }
     });
   } else {
-    app.logUserOut();
+    // app.logUserOut();
   }
 };
 
