@@ -1,3 +1,4 @@
 .env
 *.json
+*.log
 *.gz.b64
